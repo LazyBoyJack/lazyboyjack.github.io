@@ -1,1 +1,0 @@
-# lazyboyjack.github.io
