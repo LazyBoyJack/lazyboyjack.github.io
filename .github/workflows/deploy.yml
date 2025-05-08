@@ -1,0 +1,18 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: [ main ]  # 或者你的默认分支，如 master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: src
+          branch: gh-pages
