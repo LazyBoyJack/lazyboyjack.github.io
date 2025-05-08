@@ -1,0 +1,115 @@
+﻿const generatedBibEntries = {
+    "10655516": {
+        "abstract": "Vector-Quantized (VQ-based) generative models usually consist of two basic components, i.e., VQ tokenizers and generative transformers. Prior research focuses on improving the reconstruction fidelity of VQ tokenizers but rarely examines how the improvement in reconstruction affects the generation ability of generative transformers. In this paper, we surprisingly find that improving the reconstruction fidelity of VQ tokenizers does not necessarily improve the generation. Instead, learning to compress semantic features within VQ tokenizers significantly improves generative transformers' ability to capture textures and structures. We thus highlight two competing objectives of VQ tokeniz-ers for image synthesis: semantic compression and details preservation. Different from previous work that pri-oritizes better details preservation, we propose Semantic-Quantized GAN (SeQ-GAN) with two learning phases to balance the two objectives. In the first phase, we propose a semantic-enhanced perceptual loss for better semantic compression. In the second phase, we fix the encoder and codebook, but enhance and finetune the decoder to achieve better details preservation. Our proposed SeQ-GAN significantly improves VQ-based generative models for both un-conditional and conditional image generation. Specifically, SeQ-GAN achieves a Fr\u00e9 chet Inception Distance (FID) of 6.25 and Inception Score (IS) of 140.9 on 256\u00d7256 Ima-geNet generation, which is a remarkable improvement over VIT-VQGAN (714M), which obtains 11.2 FID and 97.2 IS.",
+        "author": "Gu, Yuchao and Wang, Xintao and Ge, Yixiao and Shan, Ying and Shou, Mike Zheng",
+        "booktitle": "2024 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "doi": "10.1109/CVPR52733.2024.00729",
+        "keywords": "type:computer_science, computer_vision, pattern_recognition Visualization;Computer vision;Image coding;Image synthesis;Semantics;Pipelines;Transformers;Image and video synthesis and generation",
+        "number": "",
+        "pages": "7631-7640",
+        "title": "Rethinking the Objectives of Vector-Quantized Tokenizers for Image Synthesis",
+        "type": "INPROCEEDINGS",
+        "volume": "",
+        "year": "2024"
+    },
+    "9578911": {
+        "abstract": "Designed to learn long-range interactions on sequential data, transformers continue to show state-of-the-art results on a wide variety of tasks. In contrast to CNNs, they contain no inductive bias that prioritizes local interactions. This makes them expressive, but also computationally infeasible for long sequences, such as high-resolution images. We demonstrate how combining the effectiveness of the inductive bias of CNNs with the expressivity of transformers enables them to model and thereby synthesize high-resolution images. We show how to (i) use CNNs to learn a context-rich vocabulary of image constituents, and in turn (ii) utilize transformers to efficiently model their composition within high-resolution images. Our approach is readily applied to conditional synthesis tasks, where both non-spatial information, such as object classes, and spatial information, such as segmentations, can control the generated image. In particular, we present the first results on semantically-guided synthesis of megapixel images with transformers. Project page at https://git.io/JLlvY.",
+        "author": "Esser, Patrick and Rombach, Robin and Ommer, Bj\u00f6rn",
+        "booktitle": "2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "doi": "10.1109/CVPR46437.2021.01268",
+        "keywords": "Vocabulary;Image segmentation;Computer vision;Image synthesis;Computer architecture;Transformers;Rendering (computer graphics)",
+        "number": "",
+        "pages": "12868-12878",
+        "title": "Taming Transformers for High-Resolution Image Synthesis",
+        "type": "INPROCEEDINGS",
+        "volume": "",
+        "year": "2021"
+    },
+    "9878676": {
+        "abstract": "Generative transformers have experienced rapid popularity growth in the computer vision community in synthesizing high-fidelity and high-resolution images. The best generative transformer models so far, however, still treat an image naively as a sequence of tokens, and decode an image sequentially following the raster scan ordering (i.e. line-by-line). We find this strategy neither optimal nor efficient. This paper proposes a novel image synthesis paradigm using a bidirectional transformer decoder, which we term MaskGIT. During training, MaskGIT learns to predict randomly masked tokens by attending to tokens in all directions. At inference time, the model begins with generating all tokens of an image simultaneously, and then refines the image iteratively conditioned on the previous generation. Our experiments demonstrate that MaskGIT significantly outperforms the state-of-the-art transformer model on the ImageNet dataset, and accelerates autoregressive decoding by up to 48x. Besides, we illustrate that MaskGIT can be easily extended to various image editing tasks, such as inpainting, extrapolation, and image manipulation. Project page: masked-generative-image-transformer.github.io.",
+        "author": "Chang, Huiwen and Zhang, Han and Jiang, Lu and Liu, Ce and Freeman, William T.",
+        "booktitle": "2022 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "doi": "10.1109/CVPR52688.2022.01103",
+        "keywords": "Training;Computer vision;Visualization;Image synthesis;Computational modeling;Transformers;Decoding;Image and video synthesis and generation; Machine learning; Self-& semi-& meta- & unsupervised learning",
+        "number": "",
+        "pages": "11305-11315",
+        "title": "MaskGIT: Masked Generative Image Transformer",
+        "type": "INPROCEEDINGS",
+        "volume": "",
+        "year": "2022"
+    },
+    "goodfellow2014generative": {
+        "abstract": "We propose a new framework for estimating generative models via adversarial nets, in which we simultaneously train two models: a generative model G that captures the data distribution, and a discriminative model D that estimates the probability that a sample came from the training data rather than G. The training procedure for G is to maximize the probability of D making a mistake. This framework corresponds to a minimax two-player game. In the space of arbitrary functions G and D, a unique solution exists, with G recovering the training data distribution and D equal to 1/2 everywhere. In the case where G and D are defined by multilayer perceptrons, the entire system can be trained with backpropagation. There is no need for any Markov chains or unrolled approximate inference networks during either training or generation of samples. Experiments demonstrate the potential of the framework through qualitative and quantitatively evaluation of the generated samples.",
+        "author": "Goodfellow, Ian J and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua",
+        "doi": "10.48550/arXiv.1406.2661",
+        "journal": "Advances in neural information processing systems",
+        "keywords": "type:cv, image_generation, deep_learning",
+        "title": "Generative adversarial nets",
+        "type": "article",
+        "volume": "27",
+        "year": "2014"
+    },
+    "kingma2013auto": {
+        "abstract": "How can we perform efficient inference and learning in directed probabilistic models, in the presence of continuous latent variables with intractable posterior distributions, and large datasets? We introduce a stochastic variational inference and learning algorithm that scales to large datasets and, under some mild differentiability conditions, even works in the intractable case. Our contributions are two-fold. First, we show that a reparameterization of the variational lower bound yields a lower bound estimator that can be straightforwardly optimized using standard stochastic gradient methods. Second, we show that for i.i.d. datasets with continuous latent variables per datapoint, posterior inference can be made especially efficient by fitting an approximate inference model (also called a recognition model) to the intractable posterior using the proposed lower bound estimator. Theoretical advantages are reflected in experimental results.",
+        "author": "Kingma, Diederik P and Welling, Max",
+        "doi": "10.48550/arXiv.1312.6114",
+        "journal": "arXiv e-prints",
+        "keywords": "type:machine_learning, Probabilistic_Modeling",
+        "pages": "arXiv--1312",
+        "title": "Auto-Encoding Variational Bayes",
+        "type": "article",
+        "year": "2013"
+    },
+    "radford2015unsupervised": {
+        "abstract": "In recent years, supervised learning with convolutional networks (CNNs) has seen huge adoption in computer vision applications. Comparatively, unsupervised learning with CNNs has received less attention. In this work we hope to help bridge the gap between the success of CNNs for supervised learning and unsupervised learning. We introduce a class of CNNs called deep convolutional generative adversarial networks (DCGANs), that have certain architectural constraints, and demonstrate that they are a strong candidate for unsupervised learning. Training on various image datasets, we show convincing evidence that our deep convolutional adversarial pair learns a hierarchy of representations from object parts to scenes in both the generator and discriminator. Additionally, we use the learned features for novel tasks - demonstrating their applicability as general image representations.",
+        "author": "Radford, Alec and Metz, Luke and Chintala, Soumith",
+        "doi": "10.48550/arXiv.1511.06434",
+        "journal": "arXiv preprint arXiv:1511.06434",
+        "keywords": "type:cv, image_generation, deep_learning",
+        "title": "Unsupervised representation learning with deep convolutional generative adversarial networks",
+        "type": "article",
+        "year": "2015"
+    },
+    "van2017neural": {
+        "abstract": "Learning useful representations without supervision remains a key challenge in machine learning. In this paper, we propose a simple yet powerful generative model that learns such discrete representations. Our model, the Vector Quantised-Variational AutoEncoder (VQ-VAE), differs from VAEs in two key ways: the encoder network outputs discrete, rather than continuous, codes; and the prior is learnt rather than static. In order to learn a discrete latent representation, we incorporate ideas from vector quantisation (VQ). Using the VQ method allows the model to circumvent issues of posterior collapse'' -\u2014 where the latents are ignored when they are paired with a powerful autoregressive decoder -\u2014 typically observed in the VAE framework. Pairing these representations with an autoregressive prior, the model can generate high quality images, videos, and speech as well as doing high quality speaker conversion and unsupervised learning of phonemes, providing further evidence of the utility of the learnt representations.",
+        "author": "Van Den Oord, Aaron and Vinyals, Oriol and others",
+        "doi": "10.48550/arXiv.1711.00937",
+        "journal": "Advances in neural information processing systems",
+        "keywords": "type:computer_science, machine_learning",
+        "title": "Neural discrete representation learning",
+        "type": "article",
+        "volume": "30",
+        "year": "2017"
+    },
+    "yao2025reconstruction": {
+        "abstract": "Latent diffusion models with Transformer architectures excel at generating high-fidelity images. However, recent studies reveal an optimization dilemma in this two-stage design: while increasing the per-token feature dimension in visual tokenizers improves reconstruction quality, it re quires substantially larger diffusion models and more training iterations to achieve comparable generation performance. Consequently, existing systems often settle for sub optimal solutions, either producing visual artifacts due to information loss within tokenizers or failing to converge fully due to expensive computation costs. We argue that this dilemma stems from the inherent difficulty in learning unconstrained high-dimensional latent spaces. To ad dress this, we propose aligning the latent space with pre trained vision foundation models when training the visual tokenizers. Our proposed VA-VAE (Vision foundation model Aligned Variational AutoEncoder) significantly expands the reconstruction-generation frontier of latent diffusion models, enabling faster convergence of Diffusion Transformers (DiT) in high-dimensional latent spaces. To exploit the full potential of VA-VAE, we build an enhanced DiT baseline with improved training strategies and architecture designs, termed LightningDiT. The integrated system achieves state-of-the-art (SOTA) performance on ImageNet 256\u00d7256generation with an FID score of 1.35 while demonstrating remarkable training efficiency by reaching an FID score of 2.11 in just 64 epochs\u2013 representing an over 21\u00d7convergence speedup compared to the original DiT. Models and codes are available at https:// github.com/hustvl/LightningDiT. ",
+        "author": "Jingfeng Yao, Bin Yang, Xinggang Wang",
+        "doi": "10.48550/arXiv.2501.01423",
+        "journal": "arXiv preprint arXiv:2501.01423",
+        "keywords": "type:CV, image_generation, deep_learning",
+        "title": "Reconstruction vs. generation: Taming optimization dilemma in latent diffusion models",
+        "type": "article",
+        "url": "https://arxiv.org/abs/2501.01423",
+        "year": "2025"
+    },
+    "yu2023language": {
+        "abstract": "While Large Language Models (LLMs) are the dominant models for generative tasks in language, they do not perform as well as diffusion models on image and video generation. To effectively use LLMs for visual generation, one crucial component is the visual tokenizer that maps pixel-space inputs to discrete tokens appropriate for LLM learning. In this paper, we introduce MAGVIT-v2, a video tokenizer designed to generate concise and expressive tokens for both videos and images using a common token vocabulary. Equipped with this new tokenizer, we show that LLMs outperform diffusion models on standard image and video generation benchmarks including ImageNet and Kinetics. In addition, we demonstrate that our tokenizer surpasses the previously top-performing video tokenizer on two more tasks: (1) video compression comparable to the next-generation video codec (VCC) according to human evaluations, and (2) learning effective representations for action recognition tasks.",
+        "author": "Yu, Lijun and Lezama, Jos{\\'e} and Gundavarapu, Nitesh B and Versari, Luca and Sohn, Kihyuk and Minnen, David and Cheng, Yong and Birodkar, Vighnesh and Gupta, Agrim and Gu, Xiuye and others",
+        "doi": "10.48550/arXiv.2310.05737",
+        "journal": "arXiv preprint arXiv:2310.05737",
+        "keywords": "type:computer_science, computer_vision, pattern_recognition, computer_science, artificial_intelligence, computer_science, multimedia",
+        "title": "Language Model Beats Diffusion--Tokenizer is Key to Visual Generation",
+        "type": "article",
+        "year": "2023"
+    },
+    "zhu2024scaling": {
+        "abstract": "In the realm of image quantization exemplified by VQGAN, the process encodes images into discrete tokens drawn from a codebook with a predefined size. Recent advancements, particularly with LLAMA 3, reveal that enlarging the codebook significantly enhances model performance. However, VQGAN and its derivatives, such as VQGAN-FC (Factorized Codes) and VQGAN-EMA, continue to grapple with challenges related to expanding the codebook size and enhancing codebook utilization. For instance, VQGAN-FC is restricted to learning a codebook with a maximum size of 16,384, maintaining a typically low utilization rate of less than 12% on ImageNet. In this work, we propose a novel image quantization model named VQGAN-LC (Large Codebook), which extends the codebook size to 100,000, achieving an utilization rate exceeding 99%. Unlike previous methods that optimize each codebook entry, our approach begins with a codebook initialized with 100,000 features extracted by a pre-trained vision encoder. Optimization then focuses on training a projector that aligns the entire codebook with the feature distributions of the encoder in VQGAN-LC. We demonstrate the superior performance of our model over its counterparts across a variety of tasks, including image reconstruction, image classification, auto-regressive image generation using GPT, and image creation with diffusion- and flow-based generative models. Code and models are available at https://github.com/zh460045050/VQGAN-LC.",
+        "author": "Zhu, Lei and Wei, Fangyun and Lu, Yanye and Chen, Dong",
+        "journal": "arXiv preprint arXiv:2406.11837",
+        "keywords": "type:computer_science, computer_vision, pattern_recognition",
+        "title": "Scaling the codebook size of vqgan to 100,000 with a utilization rate of 99%",
+        "type": "article",
+        "url": "https://openreview.net/forum?id",
+        "year": "2024"
+    }
+};
